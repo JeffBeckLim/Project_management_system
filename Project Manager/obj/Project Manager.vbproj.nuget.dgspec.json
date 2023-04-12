@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\limje\\source\\repos\\project_management_system\\Project Manager\\Project Manager.vbproj": {}
+    "C:\\Users\\limje\\source\\repos\\Project_management_system\\Project Manager\\Project Manager.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\limje\\source\\repos\\project_management_system\\Project Manager\\Project Manager.vbproj": {
+    "C:\\Users\\limje\\source\\repos\\Project_management_system\\Project Manager\\Project Manager.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\limje\\source\\repos\\project_management_system\\Project Manager\\Project Manager.vbproj",
+        "projectUniqueName": "C:\\Users\\limje\\source\\repos\\Project_management_system\\Project Manager\\Project Manager.vbproj",
         "projectName": "Project Manager",
-        "projectPath": "C:\\Users\\limje\\source\\repos\\project_management_system\\Project Manager\\Project Manager.vbproj",
+        "projectPath": "C:\\Users\\limje\\source\\repos\\Project_management_system\\Project Manager\\Project Manager.vbproj",
         "packagesPath": "C:\\Users\\limje\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\limje\\source\\repos\\project_management_system\\Project Manager\\obj\\",
         "projectStyle": "PackageReference",
