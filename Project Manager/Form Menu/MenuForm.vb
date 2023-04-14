@@ -126,15 +126,14 @@ Public Class MenuForm
         Dim result As DialogResult = backup.ShowDialog()
 
         If result = DialogResult.OK Then
-            Dim con As MySqlConnection = New MySqlConnection("server=localhost; user id=root;password=password;database=project_management_system;charset=utf8")
             Dim cmd As MySqlCommand = New MySqlCommand
-            cmd.Connection = con
-            con.Open()
+            cmd.Connection = myconn
+            myconn.Open()
 
             Dim mb As MySqlBackup = New MySqlBackup(cmd)
             mb.ExportToFile(backup.FileName)
 
-            con.Close()
+            myconn.Close()
 
             MessageBox.Show("Backup completed successfully.", "Backup", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
