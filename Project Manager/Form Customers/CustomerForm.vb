@@ -7,6 +7,7 @@ Public Class CustomerForm
 
     Private Sub CustomerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
         Try
             Dim QryStr = "SELECT * FROM project_management_system.customer;"
             Dim Search As New MySqlDataAdapter(QryStr, myconn)
@@ -74,7 +75,7 @@ Public Class CustomerForm
 
             ' If the user selected a file, move it to the Uploads directory and import the data into the database
             If result = DialogResult.OK Then
-                ' Get the path of the selected file
+
                 Dim filePath As String = openFileDialog2.FileName
 
                 ' Move the file to the Uploads directory
@@ -82,19 +83,15 @@ Public Class CustomerForm
                 Dim fileName As String = Path.GetFileName(filePath)
                 File.Move(filePath, Path.Combine(uploadsPath, fileName))
 
-                ' Set up the MySQL connection string
-                Dim connectionString As String = "server=localhost;user id=root;password=password;database=project_management_system"
 
                 ' Set up the MySQL command
                 Dim commandText As String = "LOAD DATA INFILE '" & Path.Combine(uploadsPath, fileName) & "' INTO TABLE customer FIELDS TERMINATED BY ',' LINES TERMINATED BY '\r\n' IGNORE 1 ROWS (customer_name,email,phone_number,address)"
-                Dim command As New MySqlCommand(commandText)
 
-                ' Set up the MySQL connection and execute the command
-                Using connection As New MySqlConnection(connectionString)
-                    connection.Open()
-                    command.Connection = connection
-                    command.ExecuteNonQuery()
-                End Using
+                Dim cmd As MySqlCommand = New MySqlCommand(commandText)
+                cmd.Connection = myconn
+                myconn.Open()
+                cmd.ExecuteNonQuery()
+
 
                 ' Display a message box to indicate that the import is complete
                 MessageBox.Show("Data import complete.")
