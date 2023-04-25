@@ -214,4 +214,9 @@ Public Class CustomerForm
         End If
 
     End Sub
+
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles btnPrint.Click
+        'MsgBox(currentDate.ToString)
+        Call importToExcel("Customer List", Me.DataGridView1, "samplereport.xlsx")
+    End Sub
 End Class

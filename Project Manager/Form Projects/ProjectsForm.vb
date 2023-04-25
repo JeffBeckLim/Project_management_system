@@ -83,4 +83,8 @@ Public Class ProjectsForm
             MsgBox("Data exported to " & saveFileDialog1.FileName & " successfully!")
         End If
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Call importToExcel("Projects List", Me.DataGridView1, "samplereportProjects.xlsx")
+    End Sub
 End Class

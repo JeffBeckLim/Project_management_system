@@ -14,6 +14,7 @@ Public Class LogInForm
             Dim myreader As MySqlDataReader
 
 
+
             strSQL = "Select * from employees where username = '" _
                 & .usernameTxtBx.Text & "' and employee_password = md5('" _
                 & .passwordTxtBx.Text & "')"

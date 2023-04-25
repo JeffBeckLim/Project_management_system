@@ -145,4 +145,8 @@ Public Class EmployeeForm
             MsgBox("Data exported to " & saveFileDialog1.FileName & " successfully!")
         End If
     End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        Call importToExcel("Employee List", Me.DataGridView1, "samplereportEmployee.xlsx")
+    End Sub
 End Class

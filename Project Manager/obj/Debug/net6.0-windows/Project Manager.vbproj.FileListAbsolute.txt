@@ -55,6 +55,8 @@ C:\Users\limje\source\repos\Project_management_system\Project Manager\bin\Debug\
 C:\Users\limje\source\repos\Project_management_system\Project Manager\bin\Debug\net6.0-windows\krbcc64.dll
 C:\Users\limje\source\repos\Project_management_system\Project Manager\bin\Debug\net6.0-windows\MySqlBackup.dll
 C:\Users\limje\source\repos\Project_management_system\Project Manager\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\limje\source\repos\Project_management_system\Project Manager\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\limje\source\repos\Project_management_system\Project Manager\bin\Debug\net6.0-windows\office.dll
 C:\Users\limje\source\repos\Project_management_system\Project Manager\obj\Debug\net6.0-windows\Project Manager.vbproj.AssemblyReference.cache
 C:\Users\limje\source\repos\Project_management_system\Project Manager\obj\Debug\net6.0-windows\Project_Manager.CustomerProjectViewForm.resources
 C:\Users\limje\source\repos\Project_management_system\Project Manager\obj\Debug\net6.0-windows\Project_Manager.CustomerForm.resources

@@ -21,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Office\root\Office16\ADDINS\PowerPivot Excel Add-inv16\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\Program Files\MySQL\mysql-for-visualstudio-1.2.10-noinstall\16.0v472\MySql.Data.dll</HintPath>
     </Reference>
