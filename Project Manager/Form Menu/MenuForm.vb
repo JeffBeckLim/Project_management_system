@@ -173,4 +173,13 @@ Public Class MenuForm
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
         MenuForm_Load(sender, e)
     End Sub
+
+    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        Call importToExcel("Job Orders", Me.DataGridView1, "samplereportJobOrder.xlsx")
+    End Sub
+
+    Private Sub MenuForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        LogInForm.Close()
+
+    End Sub
 End Class

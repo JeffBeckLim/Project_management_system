@@ -40,6 +40,7 @@ Partial Class MenuForm
         Me.Button4 = New System.Windows.Forms.Button()
         Me.formProjectID = New System.Windows.Forms.ComboBox()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.printBtn = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -195,7 +196,7 @@ Partial Class MenuForm
         '
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(540, 158)
+        Me.LinkLabel1.Location = New System.Drawing.Point(210, 155)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(162, 20)
         Me.LinkLabel1.TabIndex = 18
@@ -238,6 +239,21 @@ Partial Class MenuForm
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "↻"
         '
+        'printBtn
+        '
+        Me.printBtn.BackgroundImage = Global.Project_Manager.My.Resources.Resources.ButtonGradientBgJPG
+        Me.printBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.printBtn.FlatAppearance.BorderColor = System.Drawing.Color.DarkMagenta
+        Me.printBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.printBtn.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.printBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.printBtn.Location = New System.Drawing.Point(523, 138)
+        Me.printBtn.Name = "printBtn"
+        Me.printBtn.Size = New System.Drawing.Size(179, 37)
+        Me.printBtn.TabIndex = 63
+        Me.printBtn.Text = "Print"
+        Me.printBtn.UseVisualStyleBackColor = True
+        '
         'MenuForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -246,6 +262,7 @@ Partial Class MenuForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1062, 753)
+        Me.Controls.Add(Me.printBtn)
         Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.LinkLabel1)
@@ -292,4 +309,5 @@ Partial Class MenuForm
     Friend WithEvents Button4 As Button
     Friend WithEvents formProjectID As ComboBox
     Friend WithEvents LinkLabel3 As LinkLabel
+    Friend WithEvents printBtn As Button
 End Class

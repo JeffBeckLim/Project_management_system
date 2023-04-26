@@ -9,16 +9,16 @@ Module Module1
 
 
     Public currentDate As DateTime = DateTime.Now
-    Public strpassword As String = "mike"
+    Public strpassword As String = "user"
 
 
-    'Public xlsPath As String = System.IO.Directory.GetCurrentDirectory & "\..\..\dataXls\template\"
-    'Public xlsFiles As String = System.IO.Directory.GetCurrentDirectory & "\..\..\dataXls\"
+    Public xlsPath As String = System.IO.Directory.GetCurrentDirectory & "\..\..\..\dataXls\template\"
+    Public xlsFiles As String = System.IO.Directory.GetCurrentDirectory & "\..\..\..\dataXls\"
 
 
     'changed the directory to the exact directory since it has problems locating it. 
-    Public xlsPath As String = "C:\Users\limje\source\repos\project_management_system\Project Manager\dataXLS\Template\"
-    Public xlsFiles As String = "C:\Users\limje\source\repos\project_management_system\Project Manager\dataXLS\"
+    'Public xlsPath As String = "C:\Users\limje\source\repos\project_management_system\Project Manager\dataXLS\Template\"
+    'Public xlsFiles As String = "C:\Users\limje\source\repos\project_management_system\Project Manager\dataXLS\"
 
     Public Sub Connect_to_DB()
         myConnectionString = "server=127.0.0.1;" _
@@ -61,9 +61,17 @@ Module Module1
         'xlsSheet.Cells(3, 1) = strfilter
         xlsSheet.Cells(4, 1) = heading
         Dim x, y As Integer
+        For i = 0 To mydg.ColumnCount - 1
+            With xlsSheet.Cells(5, i + 1)
+
+            End With
+            xlsSheet.Cells(5, i + 1) = mydg.Columns(i).Name
+        Next
+
+
         For x = 0 To mydg.RowCount - 1
             For y = 0 To mydg.ColumnCount - 1
-                xlsSheet.Cells(x + 5, y + 1) = mydg.Rows(x).Cells(y).Value
+                xlsSheet.Cells(x + 6, y + 1) = mydg.Rows(x).Cells(y).Value
             Next
         Next
         With xlsSheet.Range(convertToLetters(1) & 5, convertToLetters(mydg.ColumnCount) & x + 4)
@@ -93,8 +101,8 @@ Module Module1
 
 
         ' System.Diagnostics.Process.Start("excel.exe", """" & "C:\Users\limje\source\repos\project_management_system\Project Manager\dataXLS\" & myfilename & """")
-        System.Diagnostics.Process.Start("C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE", """" & "C:\Users\limje\source\repos\project_management_system\Project Manager\dataXLS\" & myfilename & """")
-
+        'System.Diagnostics.Process.Start("C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE", """" & "C:\Users\limje\source\repos\project_management_system\Project Manager\dataXLS\" & myfilename & """")
+        Process.Start("EXCEL.EXE", """" + xlsFiles + myfilename + """")
 
     End Sub
 
@@ -126,6 +134,7 @@ Module Module1
             obj = Nothing
         Finally
             GC.Collect()
+            GC.WaitForPendingFinalizers()
         End Try
     End Sub
 
