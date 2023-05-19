@@ -7,7 +7,12 @@
     <StartupObject>Sub Main</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+    <ApplicationIcon>articles_document_pen_pages_icon_251459.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="articles_document_pen_pages_icon_251459.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />
