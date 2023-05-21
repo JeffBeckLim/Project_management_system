@@ -41,6 +41,7 @@ Partial Class MenuForm
         Me.formProjectID = New System.Windows.Forms.ComboBox()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.printBtn = New System.Windows.Forms.Button()
+        Me.linkUserManual = New System.Windows.Forms.LinkLabel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -254,6 +255,21 @@ Partial Class MenuForm
         Me.printBtn.Text = "Print"
         Me.printBtn.UseVisualStyleBackColor = True
         '
+        'linkUserManual
+        '
+        Me.linkUserManual.ActiveLinkColor = System.Drawing.Color.SandyBrown
+        Me.linkUserManual.AutoSize = True
+        Me.linkUserManual.BackColor = System.Drawing.Color.Transparent
+        Me.linkUserManual.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.linkUserManual.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.linkUserManual.LinkColor = System.Drawing.Color.White
+        Me.linkUserManual.Location = New System.Drawing.Point(950, 393)
+        Me.linkUserManual.Name = "linkUserManual"
+        Me.linkUserManual.Size = New System.Drawing.Size(93, 22)
+        Me.linkUserManual.TabIndex = 64
+        Me.linkUserManual.TabStop = True
+        Me.linkUserManual.Text = "User Manual"
+        '
         'MenuForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -262,6 +278,7 @@ Partial Class MenuForm
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1062, 753)
+        Me.Controls.Add(Me.linkUserManual)
         Me.Controls.Add(Me.printBtn)
         Me.Controls.Add(Me.LinkLabel3)
         Me.Controls.Add(Me.Button4)
@@ -310,4 +327,5 @@ Partial Class MenuForm
     Friend WithEvents formProjectID As ComboBox
     Friend WithEvents LinkLabel3 As LinkLabel
     Friend WithEvents printBtn As Button
+    Friend WithEvents linkUserManual As LinkLabel
 End Class

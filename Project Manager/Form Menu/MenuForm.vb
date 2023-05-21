@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
-
+Imports System.Diagnostics
+Imports System.IO
 Public Class MenuForm
     Dim projectList As New Dictionary(Of String, Integer)
     Dim employeeList As New Dictionary(Of String, Integer)
@@ -181,5 +182,36 @@ Public Class MenuForm
     Private Sub MenuForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         LogInForm.Close()
 
+    End Sub
+
+    Private Sub linkUserManual_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkUserManual.LinkClicked
+
+
+        ' Get the path to the Google Chrome executable
+        Dim chromePath As String = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+
+        ' Get the current directory
+        Dim currentDirectory As String = Directory.GetCurrentDirectory()
+
+        ' Specify the relative path to your HTML file
+        Dim relativePath As String = "..\..\..\User Manual\index.html"
+
+        ' Combine the current directory and the relative path
+        Dim filePath As String = Path.Combine(currentDirectory, relativePath)
+
+        ' Convert the file path to a file URL
+        Dim fileURL As String = New Uri(filePath).AbsoluteUri
+
+        ' Create a new ProcessStartInfo object
+        Dim psi As New ProcessStartInfo()
+
+        ' Set the file path to open
+        psi.FileName = chromePath
+
+        ' Set the arguments to the file URL
+        psi.Arguments = fileURL
+
+        ' Open the HTML file with Google Chrome
+        Process.Start(psi)
     End Sub
 End Class

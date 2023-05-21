@@ -12,8 +12,8 @@ Module Module1
     Public strpassword As String = "user"
 
 
-    Public xlsPath As String = System.IO.Directory.GetCurrentDirectory & "\..\..\..\dataXls\template\"
-    Public xlsFiles As String = System.IO.Directory.GetCurrentDirectory & "\..\..\..\dataXls\"
+    Public xlsPath As String = IO.Directory.GetCurrentDirectory & "\..\..\..\dataXls\template\"
+    Public xlsFiles As String = IO.Directory.GetCurrentDirectory & "\..\..\..\dataXls\"
 
 
     'changed the directory to the exact directory since it has problems locating it. 
