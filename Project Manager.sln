@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Project Manager", "Project Manager\Project Manager.vbproj", "{359222F2-FC10-4BBB-9703-887A7CE60FA8}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "P-manager", "P-manager\P-manager.vdproj", "{C9C4DF77-9F0B-4138-BB4E-6733473B26CA}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Project Manager App", "Project Manager App\Project Manager App.vdproj", "{D13F190B-7B02-439D-AF02-A8AE5D1F7095}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{359222F2-FC10-4BBB-9703-887A7CE60FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{359222F2-FC10-4BBB-9703-887A7CE60FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{359222F2-FC10-4BBB-9703-887A7CE60FA8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9C4DF77-9F0B-4138-BB4E-6733473B26CA}.Debug|Any CPU.ActiveCfg = Debug
-		{C9C4DF77-9F0B-4138-BB4E-6733473B26CA}.Release|Any CPU.ActiveCfg = Release
+		{D13F190B-7B02-439D-AF02-A8AE5D1F7095}.Debug|Any CPU.ActiveCfg = Debug
+		{D13F190B-7B02-439D-AF02-A8AE5D1F7095}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

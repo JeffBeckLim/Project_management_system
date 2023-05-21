@@ -213,5 +213,6 @@ Public Class MenuForm
 
         ' Open the HTML file with Google Chrome
         Process.Start(psi)
+
     End Sub
 End Class
